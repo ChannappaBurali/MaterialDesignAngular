@@ -1,0 +1,28 @@
+<div >     <!--  class="card" -->
+  <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Employee List</h3>
+  
+  <div> <!--class="card-body" class="table-editable"-->
+    <div id="table" >
+     
+      <table class="table table-bordered table-responsive-md table-striped text-center">
+        <tr>
+            <th class="text-center"> EmployeeID</th>
+          <th class="text-center"> FirstName</th>
+          <th class="text-center">LastName</th> 
+          <th class="text-center">EmpCode</th> 
+          <th class="text-center">Position</th>  
+          <th class="text-center">Office</th>                 
+        </tr>
+        <tr *ngFor="let product of emService.employeeList; let id = index">
+          <td>{{product.EmployeeID}}</td>            
+          <td>{{product.FirstName}}</td>        
+          <td>{{product.LastName}}</td>   
+          <td>{{product.EmpCode}}</td>
+          <td>{{product.Position}}</td>          
+         
+        </tr>
+      </table>
+      <!-- <p><a [routerLink]="['/login']">Logout</a></p> -->
+    </div>
+  </div>
+</div>
